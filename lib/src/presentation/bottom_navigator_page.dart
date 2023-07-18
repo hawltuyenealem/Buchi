@@ -40,7 +40,7 @@ class _BottomNavigatorPageState extends State<BottomNavigatorPage> {
           Icons.home_outlined,
           size: 32,
         ),
-        label: "Home",
+        label: "",
         activeIcon: Icon(
           Icons.home_filled,
           size: 40,
@@ -48,24 +48,24 @@ class _BottomNavigatorPageState extends State<BottomNavigatorPage> {
       ),
       const BottomNavigationBarItem(
         icon: Icon(
-          Icons.favorite_outline,
+          Icons.search,
           size: 32,
         ),
-        label: "search",
+        label: "",
         activeIcon: Icon(
-          Icons.favorite,
+          Icons.search,
           size: 40,
         ),
       ),
 
       const BottomNavigationBarItem(
         icon: Icon(
-          Icons.person_outline,
+          Icons.location_on_outlined,
           size: 32,
         ),
-        label: "Profile",
+        label: "",
         activeIcon: Icon(
-          Icons.person,
+          Icons.location_on_outlined,
           size: 40,
         ),
       ),
