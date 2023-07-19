@@ -6,17 +6,16 @@ import 'package:dartz/dartz.dart';
 
 class PetRepoImpl implements PetRepo {
   final PetDataSource petDataSource;
-  final NetworkInfo networkInfo;
 
-  PetRepoImpl(this.petDataSource, this.networkInfo);
+  PetRepoImpl({required this.petDataSource});
 
 
   @override
   Future<Either<String, PetResponse>> getPets() async {
-    if (await networkInfo.isConnected) {
+    try{
       var res = await petDataSource.getPets();
       return Right(res);
-    } else {
+    } catch(e) {
       return const Left("Please check your connection!");
     }
   }

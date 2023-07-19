@@ -74,7 +74,7 @@ class _BottomNavigatorPageState extends State<BottomNavigatorPage> {
       type: BottomNavigationBarType.fixed,
       showUnselectedLabels: true,
       backgroundColor: Color(0xFFFAFAFA),
-      currentIndex: currentIndex,
+      currentIndex: currentIndex+1,
       selectedItemColor:  Color(0xFF2456B4),
       unselectedItemColor: Colors.black54,
       iconSize: 24,

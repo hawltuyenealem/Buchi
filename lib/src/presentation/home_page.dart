@@ -21,7 +21,7 @@ class _HomePageState extends State<HomePage> {
         children: [
           ClipRRect(
             borderRadius: const BorderRadius.only(
-              topLeft: Radius.circular(8),
+              topLeft: Radius.circular(2),
               topRight: Radius.circular(8),
             ),
             child: CachedNetworkImage(

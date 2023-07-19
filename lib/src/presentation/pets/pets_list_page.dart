@@ -61,7 +61,7 @@ class PetsPage extends StatelessWidget {
             else if (state is PetError) {
               return Center(child: Text(state.message));
             }
-            return const SizedBox();
+            return const Center(child: Text("here it is "),);
             },
         ));
   }

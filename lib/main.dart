@@ -12,14 +12,13 @@ void main() async {
 
 class MyApp extends StatelessWidget {
   final AppRouter appRouter = AppRouter();
-
   MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider<PetBloc>(create: (_)=> sl.get<PetBloc>()..add(GetPets()))
+        BlocProvider<PetBloc>(create: (_)=> PetBloc(petUsecase: sl()))
       ],
       child: MaterialApp(
         title: 'Flutter Demo',
