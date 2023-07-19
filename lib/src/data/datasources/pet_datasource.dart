@@ -24,6 +24,7 @@ class PetDataSource {
           },
         ),
       );
+      print("here we go ${response}");
       final res = json.encode(ResponseStatus(response));
       responseJson = petResponseFromJson(res);
     } on SocketException {

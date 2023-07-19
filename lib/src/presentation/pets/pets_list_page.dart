@@ -14,14 +14,50 @@ class PetsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            const DrawerHeader(
+              decoration: BoxDecoration(
+                color: Colors.blue,
+              ),
+              child: Text('Drawer Header'),
+            ),
+            ListTile(
+              title: const Text('Item 1'),
+              onTap: () {
+                // Update the state of the app.
+                // ...
+              },
+            ),
+            ListTile(
+              title: const Text('Item 2'),
+              onTap: () {
+                // Update the state of the app.
+                // ...
+              },
+            ),
+          ],
+        ),
+      ),
         backgroundColor: kFadedBackgroundColor,
         appBar: AppBar(
             backgroundColor: kBaseColor,
             automaticallyImplyLeading: false,
-            title: Text(
-              "Pets",
-              style: Theme.of(context).textTheme.displaySmall?.copyWith(
-                  fontSize: 24, color: kDarkTextColor, fontFamily: 'roboto'),
+            centerTitle: true,
+            title: Center(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  const Icon(Icons.pentagon_outlined,color: kDarkTextColor,),
+                  Text(
+                    "Buchi",
+                    style: Theme.of(context).textTheme.displaySmall?.copyWith(
+                        fontSize: 24, color: kDarkTextColor, fontFamily: 'roboto'),
+                  ),
+                ],
+              ),
             ),
             leading: IconButton(
               icon: const Icon(
@@ -30,6 +66,7 @@ class PetsPage extends StatelessWidget {
               ),
               onPressed: () => Navigator.of(context).pop(),
             ),
+
             actions: const [
               Padding(
                 padding: EdgeInsets.all(8.0),

@@ -14,6 +14,7 @@ class PetRepoImpl implements PetRepo {
   Future<Either<String, PetResponse>> getPets() async {
     try{
       var res = await petDataSource.getPets();
+      print("here we go repo {res}");
       return Right(res);
     } catch(e) {
       return const Left("Please check your connection!");
