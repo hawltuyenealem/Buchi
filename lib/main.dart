@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider<PetBloc>(create: (_)=> PetBloc(petUsecase: sl()))
+        BlocProvider<PetBloc>(create: (_)=> PetBloc(petUsecase: sl())..add(GetPets()))
       ],
       child: MaterialApp(
         title: 'Flutter Demo',
